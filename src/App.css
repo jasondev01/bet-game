@@ -1,38 +1,98 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: #333333;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  background: #222;
+  min-height: 200px;
+  min-width: 250px;
+  padding: 20px;
+  border: 2px solid #01ccff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.box {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 114, 207);
+  font-size: 20px;
+  font-weight: 600;
+  width: 70px;
+  height: 40px;
+  border-radius: 12%;
+  cursor: pointer;
+}
+
+.box.removebg {
+  background: transparent;
+}
+
+.betting {
+  display: block;
+}
+
+.betting__func {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.bet__value, 
+.btn {
+  padding: 15px;
+  width: 25%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.bet__value {
+  background: #222;
+  color: #fff;
+  outline: 0;
+  border: 0;
+  border-radius: 0.8rem;
+}
+
+.btn {
+  background-color: orange;
+  color: rgb(71, 46, 37);
+  cursor: pointer;
+  border: 0;
+  color: #fff;
+  border-radius: 0.8rem;
+}
+
+.btn.claim {
+  background-color: red;
+}
+
+.credits__win {
+  min-width: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: #f2f2f2;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 85%;
   }
-  to {
-    transform: rotate(360deg);
+  .box {
+    width: auto;
+    height: auto;
   }
 }
